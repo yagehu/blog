@@ -1,0 +1,19 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "My New Hugo Site"
+theme = "terminal"
+
+[params]
+  fullWidthTheme = false
+  centerTheme = true
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    title = "Yage Hu"
+
+    [languages.en.params.logo]
+    logoText = "Hu am I"
+
+[blackFriday]
+  hrefTargetBlank = true
