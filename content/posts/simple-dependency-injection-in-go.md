@@ -1,8 +1,12 @@
 +++
-title = "Simple dependency injection in Go with Fx" date = "2019-11-21" author =
-"Yage Hu" cover = "" tags = ["go", "fx"] keywords = ["go", "golang"] description
-= '''Learn how Fx makes dependency injection and developing applications simple
-in Go.
+title = "Simple dependency injection in Go with Fx"
+date = "2019-11-21"
+author = "Yage Hu"
+cover = ""
+tags = ["go", "fx"]
+keywords = ["go", "golang"]
+description = '''Learn how Fx makes dependency injection and developing
+applications simple in Go.
 '''
 showFullContent = false
 +++
@@ -156,4 +160,4 @@ Fx provide many other advanced DI features. Its GoDoc provides example usage.
 
 # An example modular Fx application.
 
-I've created a sample Fx app that runs an HTTP server.
+I've created a [sample Fx app](github.com/yagehu/sample-fx-app) that runs an HTTP server.
