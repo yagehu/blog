@@ -112,7 +112,7 @@ func register(lifecycle fx.Lifecycle) {
     mux := http.NewServeMux()
     server := http.Server{
         Addr: ":8080",
-        Handler mux,
+        Handler: mux,
     }
     mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
         w.WriteHeader(http.StatusOK)
@@ -175,7 +175,7 @@ func New() (*zap.Logger, error) {
 }
 ```
 
-Fx enables you to struture your code nicely. Handlers can reside in
+Fx enables you to structure your code nicely. Handlers can reside in
 `internal/handler/` subdirectories like the hello handler in the sample app. All
 the handlers can then be provided to the Fx app by defining a handler module in
 `internal/handler/module.go` like so:
