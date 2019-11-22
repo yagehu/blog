@@ -160,4 +160,49 @@ Fx provide many other advanced DI features. Its GoDoc provides example usage.
 
 # An example modular Fx application.
 
-I've created a [sample Fx app](github.com/yagehu/sample-fx-app) that runs an HTTP server.
+I've created a [sample Fx app](https://github.com/yagehu/sample-fx-app) that
+runs an HTTP server. It uses some common patterns found in Fx apps. For example,
+the app is made up of small, reusable modules like `loggerfx` which provides a
+`*zap.Logger`.
+
+```go
+var Module = fx.Provide(New)
+
+// --snip--
+
+func New() (*zap.Logger, error) {
+    // --snip--
+}
+```
+
+Fx enables you to struture your code nicely. Handlers can reside in
+`internal/handler/` subdirectories like the hello handler in the sample app. All
+the handlers can then be provided to the Fx app by defining a handler module in
+`internal/handler/module.go` like so:
+
+```go
+package handler
+
+// --snip--
+
+var Module = fx.Options(
+    hello.Module,
+    user.Module,
+    // ...
+)
+
+// In main.go
+fx.New(
+    handler.Module, // this provides all the handlers registered previously
+)
+```
+
+To run the example, simply clone the repository and `go run main.go`.
+
+# Conclusion
+
+As you can see, Fx is a very lightweight DI framework that promotes good code
+structure. I've used it to build multiple MVCS style apps. Although at first
+glance using Fx seems to result in slightly more boilerplate code, in practice
+this makes the codebase much easier to navigate and your packages easier to
+test.
