@@ -4,4 +4,4 @@
 
 [submodule "public"]
 	path = public
-	url = https://github.com/yagehu/yagehu.github.io.git
+	url = git@github.com:yagehu/yagehu.github.io.git
