@@ -1,8 +1,11 @@
 ---
 title: "Yage Hu"
 date: 2019-11-22T11:53:16-08:00
-draft: true
+draft: false
 ---
 
-I am a software engineer. I graduated from University of California, Davis in
-2017.
+I am a software engineer passionate about coding and technology. I have
+experience in DevOps and backend software development. My favorite programming
+language is Go.
+
+- [LinkedIn](https://www.linkedin.com/in/yage-hu-01776268/)
