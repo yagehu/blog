@@ -77,7 +77,7 @@ to be provided to the functions during test time.
 
 # Introducting Fx: a Go dependency injection framework.
 
-[Fx](github.com/uber-go/fx) is Uber's solution for easy DI in Go. According to
+[Fx](https://github.com/uber-go/fx) is Uber's solution for easy DI in Go. According to
 [Fx's GoDoc](https://godoc.org/go.uber.org/fx):
 
 > Package fx is a framework that makes it easy to build applications out of
